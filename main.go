@@ -6,6 +6,12 @@ import (
 	"strings"
 )
 
+var (
+	rooms	map[string]*Room
+	player	Player
+	events	[]Event
+)
+
 func main() {
 	// sec := time.Second
     printMessages(beginnerMessage)
