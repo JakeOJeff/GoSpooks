@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
     "fmt"
 	"time"
 	"strings"
+	"os"
 	// "math/rand"
 )
 
@@ -28,7 +30,7 @@ func main() {
 
         fmt.Print("> ")
         scanner.Scan()
-    	input := strings.TrimSpace(strings.ToLower(scanner.Text()))
+    	input = strings.TrimSpace(strings.ToLower(scanner.Text()))
 
 
         switch input {
