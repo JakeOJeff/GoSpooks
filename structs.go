@@ -13,3 +13,8 @@ type Player struct {
     CurrentRoom string
     Inventory   []string
 }
+
+type Event struct {
+    Message string
+    Chance  int 
+}
