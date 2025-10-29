@@ -10,8 +10,7 @@ func main() {
 	delay := 500 * time.Millisecond
 
 
-    fmt.Println("Welcome")
-	time.Sleep(delay)
+    printMessages(beginnerMessage)
 
 
 
@@ -33,3 +32,9 @@ func main() {
     }
 }
 
+func printMessages(messages []string){
+	for _, msg := range messages {
+		fmt.Println(msg)
+		time.Sleep(delay)
+	}
+}
