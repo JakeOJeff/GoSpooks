@@ -6,12 +6,13 @@ import (
 )
 
 func main() {
-	sec := time.Second
+	// sec := time.Second
 	delay := 500 * time.Millisecond
+
 
     fmt.Println("Welcome to your GoSpooks adventure!")
 	time.Sleep(delay)
-    fmt.Println("Welcome to your GoSpooks adventure!")
+    fmt.Println("There are some things you must know beforehand")
 
 
     var input string
@@ -31,3 +32,4 @@ func main() {
         }
     }
 }
+
