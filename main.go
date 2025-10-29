@@ -10,9 +10,17 @@ func main() {
 	delay := 500 * time.Millisecond
 
 
-    fmt.Println("")
+    fmt.Println("Welcome")
 	time.Sleep(delay)
-    fmt.Println()
+    fmt.Println(`      
+		':.
+         []_____
+        /\      \
+    ___/  \__/\__\__
+---/\___\ |''''''|__\-- ---
+   ||'''| |''||''|''|
+   ----------))-----
+   `)
 
 
     var input string
