@@ -1,11 +1,13 @@
 package main
 
 import (
-    "fmt"
+    "fmt",
+	"time"
 )
 
 func main() {
     fmt.Println("Welcome to your GoSpooks adventure!")
+	time.Sleep(8 * time.Second)
     fmt.Println("Welcome to your GoSpooks adventure!")
 
 
