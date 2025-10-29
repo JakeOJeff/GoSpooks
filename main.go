@@ -10,9 +10,9 @@ func main() {
 	delay := 500 * time.Millisecond
 
 
-    fmt.Println("Welcome to your GoSpooks adventure!")
+    fmt.Println("")
 	time.Sleep(delay)
-    fmt.Println("There are some things you must know beforehand")
+    fmt.Println()
 
 
     var input string
