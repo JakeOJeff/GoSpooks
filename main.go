@@ -1,18 +1,13 @@
 package main
 
 import (
-    "fmt";
-	"time";
+    "fmt"
+	"time"
 )
 
 func main() {
 	// sec := time.Second
-	delay := 500 * time.Millisecond
-
-
     printMessages(beginnerMessage)
-
-
 
     var input string
 
@@ -33,6 +28,7 @@ func main() {
 }
 
 func printMessages(messages []string){
+	delay := 500 * time.Millisecond
 	for _, msg := range messages {
 		fmt.Println(msg)
 		time.Sleep(delay)
