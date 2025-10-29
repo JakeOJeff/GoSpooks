@@ -15,7 +15,10 @@ var (
 
 func main() {
 	// sec := time.Second
+	var insideHouse bool = false
+
     printMessages(beginnerMessage)
+	scanner := bufio.NewScanner(os.Stdin)
 
     var input string
 
@@ -24,15 +27,21 @@ func main() {
 
 
         fmt.Print("> ")
-        fmt.Scanln(&input) // waits for user input
-		input = strings.ToLower(input)
+        scanner.Scan()
+    	input := strings.TrimSpace(strings.ToLower(scanner.Text()))
+
 
         switch input {
-        case "n","no":
-            fmt.Println("You step out into the fog... never to return.")
+        case "n","no", "leave":
+			if !insideHouse {
+				fmt.Println("You step out into the fog... never to return.")
+			} else {
+				fmt.Println("You leave the house in a hurry... never to return")
+			}
             return
 		case "y", "yes":
 			printMessages(houseEnter)
+			insideHouse = true
         case "look":
             fmt.Println("The walls seem to breathe... dust fills the air.")
         default:
