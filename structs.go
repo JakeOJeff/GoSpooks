@@ -8,3 +8,8 @@ type Room struct {
     Key     string
     Items   []string
 }
+
+type Player struct {
+    CurrentRoom string
+    Inventory   []string
+}
