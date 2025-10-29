@@ -1,13 +1,16 @@
 package main
 
 import (
-    "fmt",
-	"time"
+    "fmt";
+	"time";
 )
 
 func main() {
+	sec := time.Second
+	delay := 500 * time.Millisecond
+
     fmt.Println("Welcome to your GoSpooks adventure!")
-	time.Sleep(8 * time.Second)
+	time.Sleep(delay)
     fmt.Println("Welcome to your GoSpooks adventure!")
 
 
