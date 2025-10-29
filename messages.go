@@ -10,5 +10,5 @@ var beginnerMessage = []string{
    ||'''| |''||''|''|
    ----------))-----
    `,
-   "Do you want to enter this house? [(Y)es/(N)o]"
+   "Do you want to enter this house? [(Y)es/(N)o]",
 }

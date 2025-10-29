@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
 	"time"
+	"strings"
 )
 
 func main() {
@@ -14,9 +15,10 @@ func main() {
     for {
         fmt.Print("> ")
         fmt.Scanln(&input) // waits for user input
+		input = strings.ToLower(input)
 
         switch input {
-        case "quit":
+        case "n","no":
             fmt.Println("You step out into the fog... never to return.")
             return
         case "look":
