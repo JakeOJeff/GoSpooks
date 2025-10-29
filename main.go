@@ -12,15 +12,7 @@ func main() {
 
     fmt.Println("Welcome")
 	time.Sleep(delay)
-    fmt.Println(`      
-		':.
-         []_____
-        /\      \
-    ___/  \__/\__\__
----/\___\ |''''''|__\-- ---
-   ||'''| |''||''|''|
-   ----------))-----
-   `)
+
 
 
     var input string
