@@ -24,10 +24,12 @@ func main() {
 
     var input string
 
+	setupWorld()
+
     for {
 		if insideHouse {
 			current := rooms[player.CurrentRoom]
-			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Description)
+			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
 			if len(current.Items) > 0 {
 				fmt.Println("You see ", strings.Join(current.Items, ", "))
 			}
