@@ -15,3 +15,11 @@ func setupWorld() {
 		{"Someones here", 20},
 	}
 }
+
+func getExitList(exits map[string]string) string {
+	keys := make([]string, 0, len(exits))
+	for k := range exits {
+		keys = append(keys, k)
+	}
+	return strings.Join(keys, ", ")
+}
