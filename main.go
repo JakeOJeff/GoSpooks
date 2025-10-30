@@ -25,8 +25,14 @@ func main() {
     var input string
 
     for {
-		// current := rooms[player.CurrentRoom]
-
+		if insideHouse {
+			current := rooms[player.CurrentRoom]
+			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Description)
+			if len(current.Items) > 0 {
+				fmt.Println("You see ", strings.Join(current.Items, ", "))
+			}
+		}
+		
 
         fmt.Print("> ")
         scanner.Scan()
@@ -44,6 +50,7 @@ func main() {
 		case "y", "yes":
 			printMessages(houseEnter)
 			insideHouse = true
+
         case "look":
             fmt.Println("The walls seem to breathe... dust fills the air.")
         default:
