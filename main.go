@@ -65,6 +65,22 @@ func main() {
 				
 			case "look":
 				fmt.Println(current.Desc)		
+			
+			case "inventory":
+				if len(player.Inventory) == 0 {
+					fmt.Println("You have nothing on you.")
+				} else {
+					fmt.Println("Inventory: ", strings.Join(player.Inventory, ", "))
+				}
+
+			default:
+				if handleMovement(input) {
+					continue
+				} else if handlePickup(input) {
+					continue
+				} else {
+					fmt.Println("Such a command cannot be used?")
+				}
 			}
 		}
     }
