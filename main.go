@@ -62,6 +62,9 @@ func main() {
 				clearScreen()
 				printDefMessage(current)
 				fmt.Println(current.Desc)		
+				if len(current.Items) > 0 {
+					fmt.Println("You see a", strings.Join(current.Items, ", "), ". You can pick them up for further use.")
+				}
 				fmt.Println("============================")
 			case "inventory":
 				clearScreen()
@@ -76,6 +79,15 @@ func main() {
 
 			default:
 				if handleMovement(input) {
+					current = rooms[player.CurrentRoom]
+					clearScreen()
+					fmt.Println("============================")
+					fmt.Println("You entered", current.Name)
+					fmt.Println(current.Desc)
+					if len(current.Items) > 0 {
+						fmt.Println("You see a", strings.Join(current.Items, ", "), ".")
+					}
+					fmt.Println("============================")
 					continue
 				} else if handlePickup(input) {
 					continue
