@@ -21,3 +21,21 @@ func handleMovement(direction string) bool {
 	player.CurrentRoom = nextName
 	return true
 }
+
+func handlePickup(input string) bool {
+	parts := strings.Split(input, " ")
+	if len(parts) < 2 || parts[0] != "pickup" {
+		return false
+	}
+
+	item := strings.Join(parts[1:], " ")
+	room := rooms[player.CurrentRoom]
+
+	for i, v := range room.Items {
+		if strings.ToLower(v) == item {
+			player.Inventory = append(player.Inventory, v)
+			fmt.Println(" You picked up : ", v)
+			return true
+		}
+	}
+}
