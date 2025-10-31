@@ -112,10 +112,9 @@ func clearScreen() {
 func printDefMessage(current *Room) {
 	fmt.Println("============================")
 	// fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
-	if len(current.Items) > 0 {
-		fmt.Println("You see ", strings.Join(current.Items, ", "))
-	}
-
+	// if len(current.Items) > 0 {
+	// 	fmt.Println("You see a", strings.Join(current.Items, ", "), ". You can pick them up for further use.")
+	// }
 	triggerRandomEvent()
 
 	fmt.Println(" > Exits: ", getExitList(current.Exits))
