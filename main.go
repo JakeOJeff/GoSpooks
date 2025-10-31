@@ -7,6 +7,7 @@ import (
 	"strings"
 	"os"
 	"math/rand"
+	"runtime"
 )
 
 var (
@@ -65,13 +66,15 @@ func main() {
 				
 			case "look":
 				fmt.Println(current.Desc)		
-			
+				fmt.Println("============================")
 			case "inventory":
 				if len(player.Inventory) == 0 {
 					fmt.Println("You have nothing on you.")
+					
 				} else {
 					fmt.Println("Inventory: ", strings.Join(player.Inventory, ", "))
 				}
+				fmt.Println("============================")
 
 			default:
 				if handleMovement(input) {
@@ -91,5 +94,16 @@ func printMessages(messages []string){
 	for _, msg := range messages {
 		fmt.Println(msg)
 		time.Sleep(delay)
+	}
+}
+
+func clearScreen() {
+	var cmd *exec.Cmd 
+
+	switch runtime.GOOS {
+	case "windows":
+		cmd = exec.Command("cmd", "/c", "cls")
+	default:
+		cmd = exec.Command("clear") // future proofing incase linux
 	}
 }
