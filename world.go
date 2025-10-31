@@ -23,3 +23,12 @@ func getExitList(exits map[string]string) string {
 	}
 	return strings.Join(keys, ", ")
 }
+
+func triggerRandomEvent() {
+	for _, e := range events {
+		if rand.Intn(100) < e.Chance {
+			fmt.Println("*DIED*", e.Message)
+			return
+		}
+	}
+}
