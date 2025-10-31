@@ -41,6 +41,8 @@ func handlePickup(input string) bool {
 		if strings.ToLower(v) == item {
 			player.Inventory = append(player.Inventory, v)
 			fmt.Println(" You picked up : ", v)
+
+			room.Items = append(rooom.Items[:i], room.Itmes[i+1:]...)
 			return true
 		}
 	}

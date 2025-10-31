@@ -55,5 +55,5 @@ var houseEnter = []string{
     "Type 'look' to see around!",
     "Type 'inventory' to see your inventory.",
     "Type '<direction>' to go in the particular direction.",
-    "Type 'pickup <item name> to pickup an item!"
+    "Type 'pickup <item name> to pickup an item!",
 }
