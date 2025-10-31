@@ -6,7 +6,7 @@ import (
 	"time"
 	"strings"
 	"os"
-	// "math/rand"
+	"math/rand"
 )
 
 var (
@@ -23,7 +23,7 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
     var input string
-
+	rand.Seed(time.Now().UnixNano())
 	setupWorld()
 
     for {
@@ -40,24 +40,22 @@ func main() {
         scanner.Scan()
     	input = strings.TrimSpace(strings.ToLower(scanner.Text()))
 
+		if !insideHouse {
+			switch input {
+			case "n","no", "leave":
+					fmt.Println("You step out into the fog... never to return.")
 
-        switch input {
-        case "n","no", "leave":
-			if !insideHouse {
-				fmt.Println("You step out into the fog... never to return.")
-			} else {
-				fmt.Println("You leave the house in a hurry... never to return")
+				return
+			case "y", "yes":
+				printMessages(houseEnter)
+				insideHouse = true
+
+			case "look":
+				fmt.Println("The walls seem to breathe... dust fills the air.")
+			default:
+				fmt.Println("You whisper:", input)
 			}
-            return
-		case "y", "yes":
-			printMessages(houseEnter)
-			insideHouse = true
-
-        case "look":
-            fmt.Println("The walls seem to breathe... dust fills the air.")
-        default:
-            fmt.Println("You whisper:", input)
-        }
+		}
     }
 }
 
