@@ -1,5 +1,10 @@
 package main
 
+import (
+    "fmt"
+	"strings"
+
+)
 func handleMovement(direction string) bool {
 	current := rooms[player.CurrentRoom]
 	nextName, success := current.Exits[direction]

@@ -1,5 +1,9 @@
 package main
-
+import (
+    "fmt"
+	"strings"
+	"math/rand"
+)
 func setupWorld() {
 	rooms = map[string]*Room {
 		"Foyer": {
@@ -10,7 +14,7 @@ func setupWorld() {
 		},		
 		"Hallway": {
 			Name:        "Hallway",
-			Description: "Old portraits stare at you from the walls. There’s a locked door to the east.",
+			Desc: "Old portraits stare at you from the walls. There’s a locked door to the east.",
 			Exits:       map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
 			Items:       []string{"silver key"},
 		},
