@@ -38,4 +38,7 @@ func handlePickup(input string) bool {
 			return true
 		}
 	}
+
+	fmt.Println("That item doesn't exist here")
+	return true
 }
