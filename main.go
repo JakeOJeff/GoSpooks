@@ -55,22 +55,17 @@ func main() {
 				fmt.Println("You whisper:", input)
 			}
 		} else if insideHouse {
-			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
-			if len(current.Items) > 0 {
-				fmt.Println("You see ", strings.Join(current.Items, ", "))
-			}
 
-			triggerRandomEvent()
-
-			fmt.Println(" Exits: ", getExitList(current.Exits))
 			switch input {
 				
 			case "look":
 				clearScreen()
+				printDefMessage(current)
 				fmt.Println(current.Desc)		
 				fmt.Println("============================")
 			case "inventory":
 				clearScreen()
+				printDefMessage(current)
 				if len(player.Inventory) == 0 {
 					fmt.Println("You have nothing on you.")
 					
@@ -112,4 +107,16 @@ func clearScreen() {
 
 	cmd.Stdout = os.Stdout
 	cmd.Run()
+}
+
+func printDefMessage(current *Room) {
+	fmt.Println("============================")
+	// fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
+	if len(current.Items) > 0 {
+		fmt.Println("You see ", strings.Join(current.Items, ", "))
+	}
+
+	triggerRandomEvent()
+
+	fmt.Println(" > Exits: ", getExitList(current.Exits))
 }

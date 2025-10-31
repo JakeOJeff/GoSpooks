@@ -10,7 +10,7 @@ func setupWorld() {
 			Name:	"Foyer",
 			Desc:	"A dimly lit entrance. A cold breeze pushes past you.",
 			Exits:	map[string]string{"north": "Hallway"},
-			Items:	[]string{},
+			Items:	[]string{"blue key"},
 		},		
 		"Hallway": {
 			Name:	"Hallway",
@@ -37,7 +37,7 @@ func getExitList(exits map[string]string) string {
 func triggerRandomEvent() {
 	for _, e := range events {
 		if rand.Intn(100) < e.Chance {
-			fmt.Println("*DIED*", e.Message)
+			fmt.Println("*OBSERVE*", e.Message)
 			return
 		}
 	}
