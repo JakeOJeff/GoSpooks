@@ -30,6 +30,7 @@ func handleMovement(direction string) bool {
 func handlePickup(input string) bool {
 	parts := strings.Split(input, " ")
 	if len(parts) < 2 || parts[0] != "pickup" {
+		
 		return false
 	}
 
