@@ -65,9 +65,11 @@ func main() {
 			switch input {
 				
 			case "look":
+				clearScreen()
 				fmt.Println(current.Desc)		
 				fmt.Println("============================")
 			case "inventory":
+				clearScreen()
 				if len(player.Inventory) == 0 {
 					fmt.Println("You have nothing on you.")
 					
@@ -106,4 +108,7 @@ func clearScreen() {
 	default:
 		cmd = exec.Command("clear") // future proofing incase linux
 	}
+
+	cmd.Stdout = os.Stdout
+	cmd.Run()
 }
