@@ -7,6 +7,12 @@ func setupWorld() {
 			Desc:	"A dimly lit entrance. A cold breeze pushes past you.",
 			Exits:	map[string]string{"north": "Hallway"},
 			Items:	[]string{},
+		},		
+		"Hallway": {
+			Name:        "Hallway",
+			Description: "Old portraits stare at you from the walls. There’s a locked door to the east.",
+			Exits:       map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
+			Items:       []string{"silver key"},
 		},
 	}
 
