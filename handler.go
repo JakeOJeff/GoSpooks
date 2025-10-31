@@ -36,7 +36,7 @@ func handlePickup(input string) bool {
 	item := strings.Join(parts[1:], " ")
 	room := rooms[player.CurrentRoom]
 
-	for i, v := range room.Items {
+	for _, v := range room.Items {
 		if strings.ToLower(v) == item {
 			player.Inventory = append(player.Inventory, v)
 			fmt.Println(" You picked up : ", v)
