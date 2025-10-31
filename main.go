@@ -18,6 +18,7 @@ var (
 func main() {
 	// sec := time.Second
 	var insideHouse bool = false
+	var current *Room
 
     printMessages(beginnerMessage)
 	scanner := bufio.NewScanner(os.Stdin)
@@ -28,11 +29,15 @@ func main() {
 
     for {
 		if insideHouse {
-			current := rooms[player.CurrentRoom]
+			current = rooms[player.CurrentRoom]
 			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
 			if len(current.Items) > 0 {
 				fmt.Println("You see ", strings.Join(current.Items, ", "))
 			}
+
+			triggerRandomEvent()
+
+			fmt.Println(" Exits: ", getExitList(current.Exits))
 		}
 		
 
@@ -54,6 +59,12 @@ func main() {
 				fmt.Println("The walls seem to breathe... dust fills the air.")
 			default:
 				fmt.Println("You whisper:", input)
+			}
+		} else if insideHouse {
+			switch input {
+				
+			case "look":
+				fmt.Println(current.Desc)		
 			}
 		}
     }
