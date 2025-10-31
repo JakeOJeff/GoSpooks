@@ -42,3 +42,12 @@ func handlePickup(input string) bool {
 	fmt.Println("That item doesn't exist here")
 	return true
 }
+
+func hasItem(item string) bool {
+	for _, v := range player.Inventory {
+		if strings.ToLower(v) == strings.ToLower(item) {
+			return true
+		}
+	}
+	return false
+}
