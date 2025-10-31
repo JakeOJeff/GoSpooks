@@ -32,14 +32,6 @@ func main() {
     for {
 		if insideHouse {
 			current = rooms[player.CurrentRoom]
-			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
-			if len(current.Items) > 0 {
-				fmt.Println("You see ", strings.Join(current.Items, ", "))
-			}
-
-			triggerRandomEvent()
-
-			fmt.Println(" Exits: ", getExitList(current.Exits))
 		}
 		
 
@@ -63,6 +55,14 @@ func main() {
 				fmt.Println("You whisper:", input)
 			}
 		} else if insideHouse {
+			fmt.Printf("\nYou are in: %s\n%s\n", current.Name, current.Desc)
+			if len(current.Items) > 0 {
+				fmt.Println("You see ", strings.Join(current.Items, ", "))
+			}
+
+			triggerRandomEvent()
+
+			fmt.Println(" Exits: ", getExitList(current.Exits))
 			switch input {
 				
 			case "look":
