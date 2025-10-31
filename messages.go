@@ -53,6 +53,5 @@ var houseEnter = []string{
     :::::::::::::::::::' .:::::::::::::::::::::::::'                 `,
     "You entered the house, chilling as it was.",
     "Type 'look' to see around!",
-    "'inventory' to see your inventory."
-    ""
+    "'inventory' to see your inventory.",
 }
