@@ -12,6 +12,12 @@ func handleMovement(direction string) bool {
 		if hasItem(next.Key) {
 			fmt.Println("You use the ", next.Key, " to unlock the door.")
 			next.Locked = false
+		} else {
+			fmt.Println("The Door is locked. You need ", next.Key)
+			return true
 		}
 	}
+
+	player.CurrentRoom = nextName
+	return true
 }
