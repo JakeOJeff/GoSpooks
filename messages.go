@@ -10,12 +10,12 @@ var beginnerMessage = []string{
    ||'''| |''||''|''|
    ----------))-----
    `,
-   "Do you want to enter this house? [(Y)es/(N)o]",
+	"Do you want to enter this house? [(Y)es/(N)o]",
 }
 
 var houseEnter = []string{
-	
-    `
+
+	`
                                     _______________________      |
                                     |  ________   ________  |    |
                                     | |        | |    ___ | |    |
@@ -51,9 +51,18 @@ var houseEnter = []string{
     ::::::::::::::::::::::' .:::::::::::::::::::::::'
     ::::::::::::::::::::' .:::::::::::::::::::::::::
     :::::::::::::::::::' .:::::::::::::::::::::::::'                 `,
-    "You entered the house, chilling as it was.",
-    "Type 'look' to see around!",
-    "Type 'inventory' to see your inventory.",
-    "Type '<direction>' to go in the particular direction.",
-    "Type 'pickup <item name> to pickup an item!",
+	"You entered the house, chilling as it was.",
+	"Type 'look' to see around!",
+	"Type 'inventory' to see your inventory.",
+	"Type '<direction>' to go in the particular direction.",
+	"Type 'pickup <item name> to pickup an item!",
+	"Type 'exits' to see a list of exits",
+}
+
+var helpMsgs = []string{
+	"Type 'look' to see around!",
+	"Type 'inventory' to see your inventory.",
+	"Type '<direction>' to go in the particular direction.",
+	"Type 'pickup <item name> to pickup an item!",
+	"Type 'exits' to see a list of exits",
 }

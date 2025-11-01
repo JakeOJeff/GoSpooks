@@ -2,19 +2,19 @@ package main
 
 import (
 	"bufio"
-    "fmt"
-	"time"
-	"strings"
+	"fmt"
+	"math/rand"
 	"os"
 	"os/exec"
-	"math/rand"
 	"runtime"
+	"strings"
+	"time"
 )
 
 var (
-	rooms	map[string]*Room
-	player	Player
-	events	[]Event
+	rooms  map[string]*Room
+	player Player
+	events []Event
 )
 
 func main() {
@@ -22,27 +22,26 @@ func main() {
 	var insideHouse bool = false
 	var current *Room
 
-    printMessages(beginnerMessage)
+	printMessages(beginnerMessage)
 	scanner := bufio.NewScanner(os.Stdin)
 
-    var input string
+	var input string
 	rand.Seed(time.Now().UnixNano())
 	setupWorld()
 
-    for {
+	for {
 		if insideHouse {
 			current = rooms[player.CurrentRoom]
 		}
-		
 
-        fmt.Print("> ")
-        scanner.Scan()
-    	input = strings.TrimSpace(strings.ToLower(scanner.Text()))
+		fmt.Print("> ")
+		scanner.Scan()
+		input = strings.TrimSpace(strings.ToLower(scanner.Text()))
 
 		if !insideHouse {
 			switch input {
-			case "n","no", "leave":
-					fmt.Println("You step out into the fog... never to return.")
+			case "n", "no", "leave":
+				fmt.Println("You step out into the fog... never to return.")
 
 				return
 			case "y", "yes":
@@ -57,11 +56,11 @@ func main() {
 		} else if insideHouse {
 
 			switch input {
-				
+
 			case "look":
 				clearScreen()
 				printDefMessage(current)
-				fmt.Println(current.Desc)		
+				fmt.Println(current.Desc)
 				if len(current.Items) > 0 {
 					fmt.Println("You see a", strings.Join(current.Items, ", "), ". You can pick them up for further use.")
 				}
@@ -71,12 +70,14 @@ func main() {
 				printDefMessage(current)
 				if len(player.Inventory) == 0 {
 					fmt.Println("You have nothing on you.")
-					
+
 				} else {
 					fmt.Println("Inventory: ", strings.Join(player.Inventory, ", "))
 				}
 				fmt.Println("============================")
 
+			case "exits":
+				fmt.Println(" > Exits: ", getExitList(current.Exits))
 			default:
 				if handleMovement(input) {
 					current = rooms[player.CurrentRoom]
@@ -96,10 +97,10 @@ func main() {
 				}
 			}
 		}
-    }
+	}
 }
 
-func printMessages(messages []string){
+func printMessages(messages []string) {
 	delay := 500 * time.Millisecond
 	for _, msg := range messages {
 		fmt.Println(msg)
@@ -108,7 +109,7 @@ func printMessages(messages []string){
 }
 
 func clearScreen() {
-	var cmd *exec.Cmd 
+	var cmd *exec.Cmd
 
 	switch runtime.GOOS {
 	case "windows":
@@ -129,5 +130,4 @@ func printDefMessage(current *Room) {
 	// }
 	triggerRandomEvent()
 
-	fmt.Println(" > Exits: ", getExitList(current.Exits))
 }
