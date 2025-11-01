@@ -77,12 +77,22 @@ func main() {
 				fmt.Println("============================")
 
 			case "exits":
+				clearScreen()
+				printDefMessage(current)
 				fmt.Println(" > Exits: ", getExitList(current.Exits))
+				fmt.Println("============================")
+
+			case "help":
+				clearScreen()
+				printDefMessage(current)
+				printMessages(helpMsgs)
+				fmt.Println("============================")
+
 			default:
 				if handleMovement(input) {
 					current = rooms[player.CurrentRoom]
 					clearScreen()
-					fmt.Println("============================")
+					printDefMessage(current)
 					fmt.Println("You entered", current.Name)
 					fmt.Println(current.Desc)
 					if len(current.Items) > 0 {
