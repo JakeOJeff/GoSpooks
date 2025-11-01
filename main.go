@@ -88,6 +88,8 @@ func main() {
 				printMessages(helpMsgs)
 				fmt.Println("============================")
 
+			case "clear":
+				clearScreen()
 			default:
 				if handleMovement(input) {
 					current = rooms[player.CurrentRoom]
