@@ -56,8 +56,10 @@ func setupWorld() {
 			|------------|
 			|------------|
 			|____    ____|`,
-			Exits: map[string]string{"south": ""},
-			Items: []string{"Golden Key"},
+			Locked: true,
+			Key:    "Green Key",
+			Exits:  map[string]string{"south": "Kitchen"},
+			Items:  []string{"Golden Key"},
 		},
 		"Library": {
 			Name: "Library",
