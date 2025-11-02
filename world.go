@@ -43,8 +43,12 @@ func setupWorld() {
 			|--Kitchen---|
 			|------------(
 			|____________|`,
-			Exits: map[string]string{"east": "Hallway"},
+			Exits: map[string]string{"east": "Hallway", "north": "Storage"},
 			Items: []string{"Sledge Hammer"},
+		},
+		"Storage": {
+			Name: "Storage",
+			Desc: "You are now inside the dusty storage room",
 		},
 		"Library": {
 			Name: "Library",
@@ -107,6 +111,8 @@ func setupWorld() {
 	events = []Event{
 		{"Someones here", 20},
 		{"You hear a whisper, as it creeps near you", 40},
+		{"GET OUT! GET OUT! GET OUT!", 40},
+		{"You just won't leave the dead alone will you", 50},
 	}
 }
 
