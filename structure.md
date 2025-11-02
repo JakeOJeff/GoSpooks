@@ -2,6 +2,8 @@
 
 # Structure
 
+## Guide
+
 - Enter House
 - Enter Hallway from Patio [ NO KEY ]
 - Pickup Silver Key in Hallway
@@ -53,3 +55,29 @@
 - Library to (WEST) Hallway
 - Hallway to (SOUTH) [UNLOCK - White Key] Patio
 - WIN
+
+
+## Map Layout
+
+### Top Layer
+
+                                        Attic | |
+
+### Middle Layer
+
+
+        Storage                 Bedroom                 Vault | |
+
+        Kitchen                 Hallway | |             Library
+
+                                Patio ( ESCAPE )
+
+### Bottom layer
+
+
+                                                        Basement
+
+                                                        Cracked Hallway
+
+                                                        Grain
+
