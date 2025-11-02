@@ -24,7 +24,7 @@ func setupWorld() {
 			------()------
 			_____  	 _____
 			|------------|
-			|------------|
+			|---------()-|
 			|------------|
 			|------------|
 			|------------|
@@ -32,7 +32,7 @@ func setupWorld() {
 			|------------|
 			|____  	 ____|
 			------()------`,
-			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
+			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen", "north": "bedroom", "up": "attic"},
 			Items: []string{"Silver Key"},
 		},
 		"Kitchen": {
@@ -137,6 +137,7 @@ func setupWorld() {
 			Locked: true,
 			Key:    "Hammer",
 		},
+		"Bedroom": {},
 	}
 
 	player = Player{CurrentRoom: "Foyer"}
