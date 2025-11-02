@@ -85,6 +85,7 @@ func setupWorld() {
 			Exits:  map[string]string{"down": "Dark Basement", "south": "Library"},
 			Locked: true,
 			Key:    "Sledge Hammer",
+			Items:  []string{"Green Key", "Gold Coin"},
 		},
 	}
 
