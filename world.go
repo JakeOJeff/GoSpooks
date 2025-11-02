@@ -15,8 +15,15 @@ func setupWorld() {
 			Items: []string{"blue key"},
 		},
 		"Hallway": {
-			Name:  "Hallway",
-			Desc:  "Old portraits stare at you from the walls. There’s a locked door to the east. ",
+			Name: "Hallway",
+			Desc: `Old portraits stare at you from the walls. There’s a locked door to the east. 
+									______________
+									|------------|
+									|------------|
+									----Hallway---
+									|------------|
+									|____  	 ____|
+									----Foyer-----`,
 			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
 			Items: []string{"silver key"},
 		},
