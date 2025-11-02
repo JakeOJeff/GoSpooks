@@ -79,3 +79,13 @@ func unlockAllRooms() {
 	}
 	fmt.Println("Unlocked all rooms!")
 }
+
+func unlockInteriorRooms() {
+	for _, room := range rooms {
+		if room.Locked && room.Name != "Patio" {
+			room.Locked = false
+			fmt.Println("Unlocked Interior Door:", room.Name)
+		}
+	}
+	fmt.Println("Unlocked interior rooms!")
+}

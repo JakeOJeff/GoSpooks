@@ -95,6 +95,8 @@ func main() {
 
 			case "unlock interiors":
 				clearScreen()
+				unlockInteriorRooms()
+				fmt.Println("============================")
 
 			case "clear":
 				clearScreen()
