@@ -90,6 +90,7 @@ func main() {
 
 			case "clear":
 				clearScreen()
+
 			default:
 				if handleMovement(input) {
 					current = rooms[player.CurrentRoom]
@@ -102,7 +103,9 @@ func main() {
 					}
 					fmt.Println("============================")
 					continue
-				} else if handlePickup(input) {
+				} else if handlePickup(input, current) {
+					fmt.Println("============================")
+
 					continue
 				} else {
 					fmt.Println("Such a command cannot be used?")

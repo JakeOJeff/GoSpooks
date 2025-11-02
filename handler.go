@@ -27,7 +27,9 @@ func handleMovement(direction string) bool {
 	return true
 }
 
-func handlePickup(input string) bool {
+func handlePickup(input string, current *Room) bool {
+	clearScreen()
+	printDefMessage(current)
 	parts := strings.Split(input, " ")
 	if len(parts) < 2 || parts[0] != "pickup" {
 
