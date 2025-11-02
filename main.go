@@ -60,7 +60,7 @@ func main() {
 			case "look":
 				clearScreen()
 				printDefMessage(current)
-				fmt.Println(current.Desc)
+				fmt.Println(current.Name+" :", current.Desc)
 				if len(current.Items) > 0 {
 					fmt.Println("You see a", strings.Join(current.Items, ", "), ". You can pick them up for further use.")
 				}
