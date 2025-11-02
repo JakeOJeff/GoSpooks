@@ -16,7 +16,7 @@ func setupWorld() {
 			-----Foyer----`,
 			Exits:  map[string]string{"north": "Hallway"},
 			Locked: true,
-			Key:    "white key",
+			Key:    "White Key",
 		},
 		"Hallway": {
 			Name: "Hallway",
@@ -32,7 +32,7 @@ func setupWorld() {
 			|____  	 ____|
 			------()------`,
 			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
-			Items: []string{"silver key"},
+			Items: []string{"Silver Key"},
 		},
 		"Kitchen": {
 			Name: "Kitchen",
@@ -48,7 +48,16 @@ func setupWorld() {
 		},
 		"Storage": {
 			Name: "Storage",
-			Desc: "You are now inside the dusty storage room",
+			Desc: `You are now inside the dusty storage room
+			______________
+			|------------|
+			|------------|
+			|---Storage--|
+			|------------|
+			|------------|
+			|____    ____|`,
+			Exits: map[string]string{"south": ""},
+			Items: []string{"Golden Key"},
 		},
 		"Library": {
 			Name: "Library",
@@ -68,7 +77,7 @@ func setupWorld() {
 			`,
 			Exits:  map[string]string{"west": "Hallway", "north": "Vault"},
 			Locked: true,
-			Key:    "silver key",
+			Key:    "Silver Key",
 		},
 		"Vault": {
 			Name: "Vault",
@@ -103,7 +112,8 @@ func setupWorld() {
 			|--------------|
 			|______________|`,
 			Locked: true,
-			Key:    "Gold Key",
+			Key:    "Golden Key",
+			Items:  []string{"Red Key"},
 		},
 	}
 
