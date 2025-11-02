@@ -39,5 +39,5 @@ If you are on windows, you can directly run the .exe by download the latest rele
 
 ## Guide
 
-There is a full Guide on the structure of the game if you are ever stuck. Just check out **/structure.md**!
+There is a full Guide on the structure of the game if you are ever stuck. Just check out **[structure.md](structure.md)**!
 It contains a detailed guide on the unlocking and movement
