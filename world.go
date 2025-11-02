@@ -14,12 +14,13 @@ func setupWorld() {
 			|-----()-----|
 			|____  	 ____|							
 			-----Foyer----`,
-			Exits: map[string]string{"north": "Hallway"},
-			Items: []string{"blue key"},
+			Exits:  map[string]string{"north": "Hallway"},
+			Locked: true,
+			Key:    "white key",
 		},
 		"Hallway": {
 			Name: "Hallway",
-			Desc: `Old portraits stare at you from the walls. There’s a locked door to the east. 
+			Desc: `The door locks behind you. Find a way out! Old portraits stare at you from the walls. There’s a locked door to the east. 
 			______________
 			|------------|
 			|------------|
@@ -70,7 +71,7 @@ func setupWorld() {
 			Desc: `This room is so dark and empty, you feel around for doors.
 			--------------------________--------------------
 			-------------------/--------\-------------------
-			------------------/----------\------------------
+			------------------/----[]----\------------------
 			-----------------/------------\-----------------
 			----------------/--------------\----------------
 			----------------|--------------|----------------
@@ -82,10 +83,23 @@ func setupWorld() {
 			-------------------\--------/-------------------
 			--------------------|_    _|--------------------
 			-----------------------()-----------------------`,
-			Exits:  map[string]string{"down": "Dark Basement", "south": "Library"},
+			Exits:  map[string]string{"down": "Basement", "south": "Library"},
 			Locked: true,
 			Key:    "Sledge Hammer",
 			Items:  []string{"Green Key", "Gold Coin"},
+		},
+		"Basement": {
+			Name: "Basement",
+			Desc: `You slowly descended into the basement similar to your madness.
+			________________
+			|--------------|
+			|------()------|
+			|---Basement---|
+			|--------------|
+			|--------------|
+			|______________|`,
+			Locked: true,
+			Key:    "Gold Key",
 		},
 	}
 
