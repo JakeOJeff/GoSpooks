@@ -135,9 +135,23 @@ func setupWorld() {
 			--|/\//\/|----------------`,
 			Exits:  map[string]string{"north": "Basement", "south": "Grain"},
 			Locked: true,
-			Key:    "Hammer",
+			Key:    "Gold Coin",
 		},
-		"Bedroom": {},
+		"Bedroom": {
+			Name: "Bedroom",
+			Desc: `You enter the bedroom where the moss covered mattresses gives you a headache.
+			___________________________
+			|-------------------------|
+			|-------------------------|
+			|--[====]-----------------|
+			|--[====]-----------------|
+			|-------------------------|
+			|___________________    __|
+			---------------------()----`,
+			Exits:  map[string]string{"south": "Hallway"},
+			Locked: true,
+			Key:    "Red Key",
+		},
 	}
 
 	player = Player{CurrentRoom: "Foyer"}
