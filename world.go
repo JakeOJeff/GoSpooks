@@ -10,7 +10,7 @@ func setupWorld() {
 	rooms = map[string]*Room{
 		"Foyer": {
 			Name: "Foyer",
-			Desc: `A dimly lit entrance. A cold breeze pushes past you.
+			Desc: `YOU HAVE ESCAPED! Leave this madness and do not be tempted to enter again!.
 			|-----()-----|
 			|____  	 ____|							
 			-----Foyer----`,
