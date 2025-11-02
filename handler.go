@@ -63,7 +63,7 @@ func handlePickup(input string, current *Room) bool {
 
 func hasItem(item string) bool {
 	for _, v := range player.Inventory {
-		if strings.ToLower(v) == strings.ToLower(item) {
+		if strings.EqualFold(v, item) {
 			return true
 		}
 	}
