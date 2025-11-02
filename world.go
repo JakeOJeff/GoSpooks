@@ -199,7 +199,7 @@ func setupWorld() {
 		},
 	}
 
-	player = Player{CurrentRoom: "Foyer"}
+	player = Player{CurrentRoom: "Hallway"}
 	events = []Event{
 		{"Someones here", 20},
 		{"You hear a whisper, as it creeps near you", 40},
