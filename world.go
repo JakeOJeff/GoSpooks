@@ -137,6 +137,10 @@ func setupWorld() {
 			Locked: true,
 			Key:    "Gold Coin",
 		},
+		"Grain": {
+			Name: "Grain",
+			Desc: `You have discovered the Grain, get the final key here and escape this madness!`,
+		},
 		"Bedroom": {
 			Name: "Bedroom",
 			Desc: `You enter the bedroom where the moss covered mattresses gives you a headache.
