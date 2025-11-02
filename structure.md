@@ -61,23 +61,23 @@
 
 ### Top Layer
 
-                                        Attic | |
+                                        Attic ↕
 
 ### Middle Layer
 
 
-        Storage                 Bedroom                 Vault | |
-
-        Kitchen                 Hallway | |             Library
-
+        Storage                 Bedroom                 Vault ↕ 
+           ⬆                       ⬆                      ⬆
+        Kitchen     ⬅          Hallway ↕     ⬅        Library
+                                   ⬇
                                 Patio ( ESCAPE )
 
 ### Bottom layer
 
 
-                                                        Basement
-
+                                                        Basement ↕
+                                                            ⬇
                                                         Cracked Hallway
-
+                                                          ⬇
                                                         Grain
 
