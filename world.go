@@ -21,7 +21,8 @@ func setupWorld() {
 		"Hallway": {
 			Name: "Hallway",
 			Desc: `The door locks behind you. Find a way out! Old portraits stare at you from the walls. There’s a locked door to the east. 
-			______________
+			------()------
+			_____  	 _____
 			|------------|
 			|------------|
 			|------------|
@@ -121,8 +122,20 @@ func setupWorld() {
 		},
 		"Cracked": {
 			Name: "Cracked",
-			Desc: `You discovered a cracked door which smelled musty and old.
-			`,
+			Desc: `You discovered a cracked door which smelled musty and old leading to a long corridor with a planked door.
+			--__    __----------------
+			--|------|----------------
+			--|------|----------------
+			--|------|----------------
+			--|------|----------------
+			--|------|-----Cracked----
+			--|------|-----Hallway----
+			--|------|----------------
+			--|------|----------------
+			--|/\//\/|----------------`,
+			Exits:  map[string]string{"north": "Basement", "south": "Grain"},
+			Locked: true,
+			Key:    "Hammer",
 		},
 	}
 
