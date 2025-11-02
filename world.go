@@ -33,7 +33,12 @@ func setupWorld() {
 		"Kitchen": {
 			Name: "Kitchen",
 			Desc: `Pots and pans stay solemn as the doors waver
-			`,
+			------()------
+			_____  	 _____
+			|------------|
+			|--Kitchen---|
+			|------------(
+			|____________|`,
 			Exits: map[string]string{"east": "Hallway"},
 			Items: []string{"Sledge Hammer"},
 		},
