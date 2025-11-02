@@ -16,7 +16,7 @@ func setupWorld() {
 		},
 		"Hallway": {
 			Name:  "Hallway",
-			Desc:  "Old portraits stare at you from the walls. There’s a locked door to the east.",
+			Desc:  "Old portraits stare at you from the walls. There’s a locked door to the east. ",
 			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
 			Items: []string{"silver key"},
 		},
@@ -29,12 +29,12 @@ func setupWorld() {
 		"Library": {
 			Name:   "Library",
 			Desc:   "Dusty books cover the shelves as they point as if watching you every move.",
-			Exits:  map[string]string{"west": "Hallway", "north": "Secret Vault"},
+			Exits:  map[string]string{"west": "Hallway", "north": "Vault"},
 			Locked: true,
 			Key:    "silver key",
 		},
-		"Secret Vault": {
-			Name:   "Secret Vault",
+		"Vault": {
+			Name:   "Vault",
 			Desc:   "This room is so dark and empty, you feel around for doors.",
 			Exits:  map[string]string{"down": "Dark Basement", "south": "Library"},
 			Locked: true,
