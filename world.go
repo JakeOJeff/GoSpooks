@@ -96,7 +96,7 @@ func setupWorld() {
 			--------\------------/--------
 			---------\----------/---------
 			----------\--------/----------
-		    -----------|_    _|-----------
+			-----------|_    _|-----------
 			--------------()--------------`,
 			Exits:  map[string]string{"down": "Basement", "south": "Library"},
 			Locked: true,
@@ -108,14 +108,21 @@ func setupWorld() {
 			Desc: `You slowly descended into the basement similar to your madness.
 			________________
 			|--------------|
-			|------()------|
+			|------[]------|
 			|---Basement---|
 			|--------------|
 			|--------------|
-			|______________|`,
+			|______________|
+			---()-----------`,
+			Exits:  map[string]string{"up": "Vault", "south": "Cracked"},
 			Locked: true,
 			Key:    "Golden Key",
 			Items:  []string{"Red Key"},
+		},
+		"Cracked": {
+			Name: "Cracked",
+			Desc: `You discovered a cracked door which smelled musty and old.
+			`,
 		},
 	}
 
