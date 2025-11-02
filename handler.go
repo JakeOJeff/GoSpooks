@@ -18,19 +18,20 @@ func handleMovement(direction string, current *Room) bool {
 	next := rooms[nextName]
 	if next.Locked {
 		if hasItem(next.Key) {
-			fmt.Println("You use the ", next.Key, " to unlock the door.")
+			fmt.Println("You use the", next.Key, " to unlock the door.")
 			next.Locked = false
 		} else {
-			fmt.Println("The Door is locked. You need ", next.Key)
+			fmt.Println("The Door is locked. You need", next.Key)
 			return true
 		}
 	}
+	player.CurrentRoom = nextName
+	current = rooms[player.CurrentRoom]
 	fmt.Println("You entered", current.Name)
 	fmt.Println(current.Desc)
 	if len(current.Items) > 0 {
 		fmt.Println("You see a", strings.Join(current.Items, ", "), ".")
 	}
-	player.CurrentRoom = nextName
 	return true
 }
 

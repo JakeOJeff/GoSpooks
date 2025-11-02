@@ -101,7 +101,7 @@ func main() {
 
 					continue
 				} else {
-					fmt.Println("Such a command cannot be used?")
+					fmt.Println("Such a command/direction cannot be used?")
 				}
 			}
 		}
