@@ -6,10 +6,10 @@
 - Enter Hallway from Patio [ NO KEY ]
 - Pickup Silver Key in Hallway
 - Hallway to (WEST) Kitchen
-- Pickup Sledge Hammer in Kitchen
+- Pickup Magic Driller in Kitchen
 - Kitchen to (EAST) Hallway
 - Hallway to (EAST) [UNLOCK - Silver Key] Library
-- Library to (NORTH) [BREAK - Sledge Hammer] Vault
+- Library to (NORTH) [BREAK - Magic Driller] Vault
 - Pickup Green Key, Gold Coin in Vault
 - Vault to (SOUTH) Library
 - Library to (WEST) Hallway
