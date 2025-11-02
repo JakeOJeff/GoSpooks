@@ -9,8 +9,11 @@ import (
 func setupWorld() {
 	rooms = map[string]*Room{
 		"Foyer": {
-			Name:  "Foyer",
-			Desc:  "A dimly lit entrance. A cold breeze pushes past you.",
+			Name: "Foyer",
+			Desc: `A dimly lit entrance. A cold breeze pushes past you.
+									|---Hallway--|
+									|____  	 ____|							
+									-----Foyer----`,
 			Exits: map[string]string{"north": "Hallway"},
 			Items: []string{"blue key"},
 		},
@@ -23,7 +26,7 @@ func setupWorld() {
 									----Hallway---
 									|------------|
 									|____  	 ____|
-									----Foyer-----`,
+									-----Foyer----`,
 			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen"},
 			Items: []string{"silver key"},
 		},
