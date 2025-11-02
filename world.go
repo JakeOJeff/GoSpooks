@@ -32,7 +32,7 @@ func setupWorld() {
 			|------------|
 			|____  	 ____|
 			------()------`,
-			Exits: map[string]string{"south": "Patio", "east": "Library", "west": "Kitchen", "north": "bedroom", "up": "attic"},
+			Exits: map[string]string{"south": "Patio", "east": "Library", "west": "Kitchen", "north": "Bedroom", "up": "Attic"},
 			Items: []string{"Silver Key"},
 		},
 		"Kitchen": {
@@ -134,6 +134,7 @@ func setupWorld() {
 			--|------|----------------
 			--|/\//\/|----------------`,
 			Exits:  map[string]string{"north": "Basement", "south": "Grain"},
+			Items:  []string{"Attic Key"},
 			Locked: true,
 			Key:    "Gold Coin",
 		},
@@ -153,6 +154,10 @@ func setupWorld() {
 			|----+-----+----------+-|
 			|_______________________|
 			`,
+			Exits:  map[string]string{"north": "Cracked"},
+			Items:  []string{"White Key"},
+			Locked: true,
+			Key:    "Electric Chainsaw",
 		},
 		"Bedroom": {
 			Name: "Bedroom",
@@ -194,8 +199,10 @@ func setupWorld() {
 			|----------------------------------------------------------|
 			|__________________________________________________________|
 			`,
-			Exits: map[string]string{"down": "Hallway"},
-			Items: []string{"Electric Chainsaw"},
+			Exits:  map[string]string{"down": "Hallway"},
+			Items:  []string{"Electric Chainsaw"},
+			Locked: true,
+			Key:    "Attic Key",
 		},
 	}
 

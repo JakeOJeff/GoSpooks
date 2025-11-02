@@ -69,3 +69,13 @@ func hasItem(item string) bool {
 	}
 	return false
 }
+
+func unlockAllRooms() {
+	for _, room := range rooms {
+		if room.Locked {
+			room.Locked = false
+			fmt.Println("Unlocked:", room.Name)
+		}
+	}
+	fmt.Println("Unlocked all rooms!")
+}

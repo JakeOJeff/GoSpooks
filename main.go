@@ -88,6 +88,14 @@ func main() {
 				printMessages(helpMsgs)
 				fmt.Println("============================")
 
+			case "unlock all":
+				clearScreen()
+				unlockAllRooms()
+				fmt.Println("============================")
+
+			case "unlock interiors":
+				clearScreen()
+
 			case "clear":
 				clearScreen()
 
