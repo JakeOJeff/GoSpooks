@@ -5,8 +5,11 @@ import (
 	"strings"
 )
 
-func handleMovement(direction string) bool {
-	current := rooms[player.CurrentRoom]
+func handleMovement(direction string, current *Room) bool {
+	current = rooms[player.CurrentRoom]
+	clearScreen()
+	printDefMessage(current)
+
 	nextName, success := current.Exits[direction]
 	if !success {
 		return false
@@ -22,7 +25,11 @@ func handleMovement(direction string) bool {
 			return true
 		}
 	}
-
+	fmt.Println("You entered", current.Name)
+	fmt.Println(current.Desc)
+	if len(current.Items) > 0 {
+		fmt.Println("You see a", strings.Join(current.Items, ", "), ".")
+	}
 	player.CurrentRoom = nextName
 	return true
 }
