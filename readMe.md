@@ -21,12 +21,12 @@ If you are on windows, you can directly run the .exe by download the latest rele
 
 ## How to Play
 
-### Basic Control
+### Basic Controls
 
 -	Type 'look' to see around!
 -	Type 'inventory' to see your inventory.
--	Type '<direction>' to go in the particular direction.
--	Type 'pickup <item name> to pickup an item!
+-	Type '(direction)' to go in the particular direction.
+-	Type 'pickup (item name) to pickup an item!
 -	Type 'exits' to see a list of exits.
 
 ### Debug Controls
