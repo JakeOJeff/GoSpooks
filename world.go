@@ -8,12 +8,12 @@ import (
 
 func setupWorld() {
 	rooms = map[string]*Room{
-		"Foyer": {
-			Name: "Foyer",
+		"Patio": {
+			Name: "Patio",
 			Desc: `YOU HAVE ESCAPED! Leave this madness and do not be tempted to enter again!.
 			|-----()-----|
 			|____  	 ____|							
-			-----Foyer----`,
+			-----Patio----`,
 			Exits:  map[string]string{"north": "Hallway"},
 			Locked: true,
 			Key:    "White Key",
@@ -32,7 +32,7 @@ func setupWorld() {
 			|------------|
 			|____  	 ____|
 			------()------`,
-			Exits: map[string]string{"south": "Foyer", "east": "Library", "west": "Kitchen", "north": "bedroom", "up": "attic"},
+			Exits: map[string]string{"south": "Patio", "east": "Library", "west": "Kitchen", "north": "bedroom", "up": "attic"},
 			Items: []string{"Silver Key"},
 		},
 		"Kitchen": {

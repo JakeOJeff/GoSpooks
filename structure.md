@@ -3,7 +3,7 @@
 # Structure
 
 - Enter House
-- Enter Hallway from Foyer [ NO KEY ]
+- Enter Hallway from Patio [ NO KEY ]
 - Pickup Silver Key in Hallway
 - Hallway to (WEST) Kitchen
 - Pickup Sledge Hammer in Kitchen
