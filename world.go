@@ -139,7 +139,20 @@ func setupWorld() {
 		},
 		"Grain": {
 			Name: "Grain",
-			Desc: `You have discovered the Grain, get the final key here and escape this madness!`,
+			Desc: `You have discovered the Grain, get the final key here and escape this madness!
+			--/------\---------------
+			--|------|---------------
+			__|------|_______________
+			|-+----------+----+-----|
+			|---+------+----------+-|
+			|-------+-----+---------|
+			|--+---------+-----+----|
+			|-----+---Grain------+--|
+			|---+-----------+-------|
+			|-+-----+----------+----|
+			|----+-----+----------+-|
+			|_______________________|
+			`,
 		},
 		"Bedroom": {
 			Name: "Bedroom",
